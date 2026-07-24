@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ghost_text/ghost_text.dart';
+import 'package:ghost_font/ghost_font.dart';
 
 void main() {
   testWidgets('GhostFont widget builds', (WidgetTester tester) async {

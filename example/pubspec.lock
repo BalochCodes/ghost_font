@@ -75,7 +75,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  ghost_text:
+  ghost_font:
     dependency: "direct main"
     description:
       path: ".."

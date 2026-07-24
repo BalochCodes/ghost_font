@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ghost_text/ghost_text.dart';
+import 'package:ghost_font/ghost_font.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,8 +1,8 @@
-# ghost_text
+# ghost_font
 
-[![pub package](https://img.shields.io/pub/v/ghost_text.svg)](https://pub.dev/packages/ghost_text)
+[![pub package](https://img.shields.io/pub/v/ghost_font.svg)](https://pub.dev/packages/ghost_font)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Platform: Android | iOS | Web | macOS | Windows | Linux](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20macOS%20%7C%20Windows%20%7C%20Linux-blue.svg)](https://pub.dev/packages/ghost_text)
+[![Platform: Android | iOS | Web | macOS | Windows | Linux](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20macOS%20%7C%20Windows%20%7C%20Linux-blue.svg)](https://pub.dev/packages/ghost_font)
 
 A Flutter package that creates the viral **Ghost Font** effect. 
 
@@ -22,11 +22,11 @@ Ghost Font is an optical illusion typography widget where text is rendered entir
 
 ## ⚡ Quickstart
 
-Add `ghost_text` to your `pubspec.yaml` file:
+Add `ghost_font` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ghost_text: ^1.0.0
+  ghost_font: ^1.0.0
 ```
 
 Then run:
@@ -39,11 +39,11 @@ flutter pub get
 
 ## 💻 Usage
 
-Import `package:ghost_text/ghost_text.dart` and drop `GhostFont` anywhere in your widget tree:
+Import `package:ghost_font/ghost_font.dart` and drop `GhostFont` anywhere in your widget tree:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:ghost_text/ghost_text.dart';
+import 'package:ghost_font/ghost_font.dart';
 
 class SecretTextWidget extends StatelessWidget {
   const SecretTextWidget({super.key});

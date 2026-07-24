@@ -1,4 +1,4 @@
-library ghost_text;
+library ghost_font;
 
 import 'dart:async';
 import 'dart:math';
