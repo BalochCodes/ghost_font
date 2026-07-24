@@ -9,9 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
 /// A widget that renders text using an optical illusion of moving noise.
-/// 
-/// The text is only readable because of motion perception. 
-/// If a screenshot is taken, the text becomes completely invisible 
+///
+/// The text is only readable because of motion perception.
+/// If a screenshot is taken, the text becomes completely invisible
 /// as it perfectly blends with the background noise.
 class GhostFont extends StatefulWidget {
   /// The text to display.
@@ -34,7 +34,7 @@ class GhostFont extends StatefulWidget {
 
   /// The font weight. Defaults to bold for better visibility.
   final FontWeight fontWeight;
-  
+
   /// The size of the noise texture generated in memory.
   /// 256 is usually enough because it tiles seamlessly.
   final int noiseTextureSize;
@@ -55,7 +55,8 @@ class GhostFont extends StatefulWidget {
   State<GhostFont> createState() => _GhostFontState();
 }
 
-class _GhostFontState extends State<GhostFont> with SingleTickerProviderStateMixin {
+class _GhostFontState extends State<GhostFont>
+    with SingleTickerProviderStateMixin {
   ui.Image? _noiseImage;
   late Ticker _ticker;
   double _timeBg = 0.0;
@@ -96,15 +97,15 @@ class _GhostFontState extends State<GhostFont> with SingleTickerProviderStateMix
     final pixels = Uint8List(width * height * 4);
     final random = Random();
 
-    final r1 = widget.patternColor.red;
-    final g1 = widget.patternColor.green;
-    final b1 = widget.patternColor.blue;
-    final a1 = widget.patternColor.alpha;
+    final r1 = (widget.patternColor.r * 255.0).round().clamp(0, 255);
+    final g1 = (widget.patternColor.g * 255.0).round().clamp(0, 255);
+    final b1 = (widget.patternColor.b * 255.0).round().clamp(0, 255);
+    final a1 = (widget.patternColor.a * 255.0).round().clamp(0, 255);
 
-    final r2 = widget.backgroundColor.red;
-    final g2 = widget.backgroundColor.green;
-    final b2 = widget.backgroundColor.blue;
-    final a2 = widget.backgroundColor.alpha;
+    final r2 = (widget.backgroundColor.r * 255.0).round().clamp(0, 255);
+    final g2 = (widget.backgroundColor.g * 255.0).round().clamp(0, 255);
+    final b2 = (widget.backgroundColor.b * 255.0).round().clamp(0, 255);
+    final a2 = (widget.backgroundColor.a * 255.0).round().clamp(0, 255);
 
     for (int i = 0; i < pixels.length; i += 4) {
       // 50% chance for pattern color, 50% for background color
@@ -225,13 +226,10 @@ class _GhostFontPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
       textAlign: TextAlign.center,
     );
-    
+
     textPainter.layout(minWidth: size.width, maxWidth: size.width);
-    final textOffset = Offset(
-      0,
-      (size.height - textPainter.height) / 2,
-    );
-    
+    final textOffset = Offset(0, (size.height - textPainter.height) / 2);
+
     textPainter.paint(canvas, textOffset);
 
     // Draw Foreground Noise over the text, masked by srcIn
@@ -250,15 +248,15 @@ class _GhostFontPainter extends CustomPainter {
       );
 
     canvas.drawRect(rect, fgPaint);
-    
+
     canvas.restore(); // Composites the saveLayer back to the main canvas
   }
 
   @override
   bool shouldRepaint(covariant _GhostFontPainter oldDelegate) {
-    return timeBg != oldDelegate.timeBg || 
-           timeFg != oldDelegate.timeFg ||
-           text != oldDelegate.text ||
-           fontSize != oldDelegate.fontSize;
+    return timeBg != oldDelegate.timeBg ||
+        timeFg != oldDelegate.timeFg ||
+        text != oldDelegate.text ||
+        fontSize != oldDelegate.fontSize;
   }
 }

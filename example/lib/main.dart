@@ -29,9 +29,7 @@ class ExampleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text('Ghost Font Animation'),
-      ),
+      appBar: AppBar(title: const Text('Ghost Font Animation')),
       body: const Center(
         child: SizedBox(
           width: double.infinity,
