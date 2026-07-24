@@ -1,6 +1,6 @@
 name: ghost_font
 description: "A Flutter package that creates the viral Ghost Font effect. The text is rendered as moving noise, making it invisible in static screenshots."
-version: 1.0.0
+version: 1.0.1
 homepage: "https://github.com/ShahzainBaloch/ghost_font"
 
 environment:

@@ -26,7 +26,7 @@ Add `ghost_font` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ghost_font: ^1.0.0
+  ghost_font: ^1.0.1
 ```
 
 Then run:
@@ -105,18 +105,6 @@ To run the example:
 ```bash
 cd example
 flutter run
-```
-
----
-
-## 📦 How to Publish to pub.dev
-
-```bash
-# 1. Verify dry run
-flutter pub publish --dry-run
-
-# 2. Publish package
-flutter pub publish
 ```
 
 ---

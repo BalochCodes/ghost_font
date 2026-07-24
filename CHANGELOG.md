@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Updated documentation and cleaned up internal package metadata.
+
 ## 1.0.0
 
 * Initial release of the `ghost_font` package.
