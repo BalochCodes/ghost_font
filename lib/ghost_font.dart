@@ -1,5 +1,3 @@
-library ghost_font;
-
 import 'dart:async';
 import 'dart:math';
 import 'dart:typed_data';
@@ -196,8 +194,8 @@ class _GhostFontPainter extends CustomPainter {
 
     // 1. Draw Background Noise
     final bgMatrix = Matrix4.identity()
-      ..translate(timeBg, timeBg)
-      ..scale(noiseScale);
+      ..translateByDouble(timeBg, timeBg, 0.0, 0.0)
+      ..scaleByDouble(noiseScale, noiseScale, 1.0, 1.0);
 
     final bgPaint = Paint()
       ..shader = ImageShader(
@@ -234,8 +232,8 @@ class _GhostFontPainter extends CustomPainter {
 
     // Draw Foreground Noise over the text, masked by srcIn
     final fgMatrix = Matrix4.identity()
-      ..translate(timeFg, -timeFg) // Move in opposite direction
-      ..scale(noiseScale);
+      ..translateByDouble(timeFg, -timeFg, 0.0, 0.0) // Move in opposite direction
+      ..scaleByDouble(noiseScale, noiseScale, 1.0, 1.0);
 
     final fgPaint = Paint()
       ..blendMode = BlendMode.srcIn

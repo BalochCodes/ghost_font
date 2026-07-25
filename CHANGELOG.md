@@ -1,3 +1,8 @@
+## 1.0.3
+
+* Replaced deprecated `Matrix4.translate` and `Matrix4.scale` calls with `translateByDouble` and `scaleByDouble` to fix pub.dev static analysis warnings.
+* Removed redundant library directive.
+
 ## 1.0.2
 
 * Replaced deprecated `Color.red`, `Color.green`, `Color.blue`, and `Color.alpha` getters with modern `.r`, `.g`, `.b`, and `.a` color channels for 100% pub.dev score compatibility.

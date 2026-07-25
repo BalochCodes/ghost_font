@@ -26,7 +26,7 @@ Add `ghost_font` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  ghost_font: ^1.0.2
+  ghost_font: ^1.0.3
 ```
 
 Then run:
